@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist BeastBytes/UiWidgets
+php composer.phar require --prefer-dist beastbytes/yii2-ui-widgets
 ```
 
 or add
 
 ```json
-'BeastBytes/UiWidgets': '~1.0'
+'beastbytes/yii2-ui-widgets': '~1.0'
 ```
 
 to the `require` section of your composer.json.
