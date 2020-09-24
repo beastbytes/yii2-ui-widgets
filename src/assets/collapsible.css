@@ -1,0 +1,60 @@
+/**
+ * CSS for the Collapsible widget
+ * @copyright Copyright &copy; 2020 BeastBytes - All Rights Reserved
+ * @license https://opensource.org/licenses/BSD-3-Clause BSD 3-Clause
+ * @author Chris Yates
+ * @package BeastBytes\UiWidgets
+ */
+.ui-collapsible {
+    clear: both;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.ui-collapsible::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+/* Clear content to below the button and hide content by default */
+.ui-collapsible__content {
+    clear: both;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Hide the control element */
+.ui-collapsible__control {
+    display: none;
+}
+
+/* Show content when the control checked */
+.ui-collapsible__control:checked ~ .ui-collapsible__content {
+    max-height: 25vh;
+}
+
+/* presentational below here */
+
+.ui-collapsible__button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.25rem;
+    display: block;
+    position: relative;
+    width: 1.25rem;
+}
+.ui-collapsible__button::before {
+    color: #000000;
+    content: '\025b8';
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-40%, -56%);
+}
+.ui-collapsible__control:checked + .ui-collapsible__button::before {
+    content: '\025be';
+    transform: translate(-50%, -52%);
+}

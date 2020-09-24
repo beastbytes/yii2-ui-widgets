@@ -1,0 +1,23 @@
+/**
+ * Presentational CSS for the Card widget
+ * @copyright Copyright &copy; 2020 BeastBytes - All Rights Reserved
+ * @license https://opensource.org/licenses/BSD-3-Clause BSD 3-Clause
+ * @author Chris Yates
+ * @package BeastBytes\UiWidgets
+ */
+.ui-card {
+    border: 1px solid #a9a9a9;
+    padding: 1rem 1.25rem;
+}
+.ui-card__title {
+    border-bottom: 1px solid #a9a9a9;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.ui-card__footer {
+    border-top: 1px solid #a9a9a9;
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+}

@@ -1,0 +1,50 @@
+/**
+ * CSS for the Tabs widget
+ * @copyright Copyright &copy; 2020 BeastBytes - All Rights Reserved
+ * @license https://opensource.org/licenses/BSD-3-Clause BSD 3-Clause
+ * @author Chris Yates
+ * @package BeastBytes\UiWidgets
+ */
+.ui-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    /* presentational */
+    background-color: #d3d3d3;
+    border: 1px solid #808080;
+}
+
+/* Hide the control elements */
+.ui-tabs__control {
+    display: none;
+}
+
+.ui-tabs__label {
+    cursor: pointer;
+    display: block;
+    /* presentational */
+    padding: 0.5rem 1.5rem;
+}
+
+.ui-tabs__panel {
+    display: none; /* Hide content by default */
+    flex-grow: 1;
+    width: 100%;
+    /* presentational */
+    background-color: #ffffff;
+    padding: 0.5rem 1.5rem;
+}
+
+@media (min-width: 768px) { /* below this breakpoint tabs acts as an accordion */
+    .ui-tabs__panel {
+        order: 99; /* force panels to the end, which - together with flex - makes the tabs layout  */
+    }
+}
+
+.ui-tabs__control:checked + .ui-tabs__label { /* presentational */
+    background-color: white;
+}
+
+/* Show content when the control checked */
+.ui-tabs__control:checked + .ui-tabs__label + .ui-tabs__panel {
+    display: block;
+}

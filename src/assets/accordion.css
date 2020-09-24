@@ -1,0 +1,46 @@
+/**
+ * CSS for the Accordion widget
+ * @copyright Copyright &copy; 2020 BeastBytes - All Rights Reserved
+ * @license https://opensource.org/licenses/BSD-3-Clause BSD 3-Clause
+ * @author Chris Yates
+ * @package BeastBytes\UiWidgets
+ */
+/* Hide the control element */
+.ui-accordion__control {
+    display: none;
+}
+
+.ui-accordion__label {
+    background-color: #808080;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    text-indent: 1.5rem;
+}
+.ui-accordion__label::before {
+    content: '\025b8';
+    display: block;
+    height: 1em;
+    margin-left: -1.5rem;
+    position: absolute;
+    width: 1em;
+}
+.ui-accordion__control:checked + .ui-accordion__label::before {
+    content: '\025be';
+}
+
+
+.ui-accordion__panel {
+    display: none; /* Hide content by default */
+    /* presentational */
+    background-color: #ffffff;
+    border: 1px solid #808080;
+    border-top: none;
+    margin-bottom: 0.75em;
+    width: 100%;
+}
+
+/* Show content when the control checked */
+.ui-accordion__control:checked + .ui-accordion__label + .ui-accordion__panel {
+    display: block;
+}

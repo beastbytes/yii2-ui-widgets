@@ -1,0 +1,19 @@
+{
+    "name": "beastbytes/yii2-ui-widgets",
+    "description": "Yii2 Extension that provides a set of UI widgets in CSS",
+    "type": "yii2-extension",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Chris Yates",
+            "email": "chris.l.yates@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": { "BeastBytes\\UiWidgets\\": "" }
+    }
+}
